@@ -130,7 +130,6 @@ local NEVERLOSE = {
 	_Name="NEVERLOSE"
 }
 
-print(NEVERLOSE._Name..":",NEVERLOSE._Version..':',[[Inspired By: https://neverlose.cc/]],": UI BY 3345-C-A-T-S-U-S","__ui")
 
 function NEVERLOSE:Theme(name)
 	name = tostring(name or "original"):lower()
@@ -202,14 +201,14 @@ function NEVERLOSE:AddWindow(NameScriptHub,Text,UICustomSize)
 	local UserName = Instance.new("TextLabel")
 	local headd2text
 	local oldPositionClose
-
+	
 	--Anti Spoofer
 	ScreenGui:GetPropertyChangedSignal('Enabled'):Connect(function()
 		if not ScreenGui.Enabled then
 			ScreenGui.Enabled=true
 		end
 	end)
-
+	
 	task.spawn(function()
 		if Text then
 			local TextLabel = Instance.new("TextLabel")
@@ -2256,7 +2255,7 @@ function NEVERLOSE:Notification()
 		CloseButton.Image = "rbxassetid://9127564477"
 		CloseButton.ScaleType = Enum.ScaleType.Fit
 		CloseButton.ImageTransparency=1
-
+		
 		local currenttime = 0.3
 		local function start_vu()
 			TweenService:Create(Notify,TweenInfo.new(currenttime/2,Enum.EasingStyle.Quint),{Size=UDim2.new(0.99,0,0.75,0)}):Play()
